@@ -1,0 +1,129 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f5f5f7;
+  --ink: #1c1c1e;
+  --muted: #3a3a3c;
+  --line: #d2d2d7;
+  --focus: #0071e3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1c1e;
+    --ink: #f5f5f7;
+    --muted: #d1d1d6;
+    --line: #3a3a3c;
+    --focus: #64b5ff;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 1.0625rem/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.shell {
+  width: min(40rem, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.skip {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  transform: translateY(-160%);
+  background: var(--ink);
+  color: var(--bg);
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.skip:focus { transform: none; }
+
+.mast { padding-top: 1.75rem; }
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.brand img { border-radius: 7px; }
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 1rem 0 1.15rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.languages a {
+  color: var(--ink);
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  line-height: 1.3;
+}
+
+.languages a[aria-current="page"] {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+main { padding-bottom: 0.5rem; }
+
+.updated {
+  margin: 1.35rem 0 0.2rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+h1 {
+  margin: 0 0 1.1rem;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  margin: 2rem 0 0.55rem;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+}
+
+p { margin: 0.75rem 0; }
+
+ul { margin: 0.75rem 0; padding-left: 1.2rem; }
+
+li { margin: 0.4rem 0; }
+
+footer {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--line);
+  padding: 1.15rem 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 40rem) {
+  h1 { font-size: 1.7rem; }
+  body { font-size: 1rem; }
+}

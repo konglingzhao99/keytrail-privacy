@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>隐私政策 — KeyTrail</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" href="../assets/icon.png">
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-cn/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="ru" href="../ru/">
+<link rel="alternate" hreflang="fr" href="../fr/">
+<link rel="alternate" hreflang="ko" href="../ko/">
+<link rel="alternate" hreflang="de" href="../de/">
+<link rel="alternate" hreflang="hi" href="../hi/">
+<link rel="alternate" hreflang="th" href="../th/">
+<link rel="alternate" hreflang="mn" href="../mn/">
+<link rel="alternate" hreflang="x-default" href="../en/">
+</head>
+<body id="top">
+<a class="skip" href="#content">跳到正文</a>
+<div class="shell">
+<header class="mast">
+<a class="brand" href="../">
+<img src="../assets/icon.png" width="28" height="28" alt="">
+<span>KeyTrail</span>
+</a>
+</header>
+<nav class="languages" aria-label="语言">
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../zh-cn/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../ko/" hreflang="ko" lang="ko">한국어</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../hi/" hreflang="hi" lang="hi">हिन्दी</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../mn/" hreflang="mn" lang="mn">Монгол</a>
+</nav>
+<main id="content">
+<p class="updated">最后更新：2026年10月11日</p>
+<h1>隐私政策</h1>
+<p>KeyTrail 是一款原生 macOS 菜单栏应用。你可以在菜单栏中查找和搜索键盘快捷键，查看与内置目录相符的近期快捷键，并保存自己的快捷键记录。</p>
+<h2>本页说明的内容</h2>
+<p>本页说明在你的 Mac 上运行的 KeyTrail。KeyTrail 没有账号。</p>
+<h2>应用处理的信息</h2>
+<p>KeyTrail 不包含广告、分析、崩溃报告或网络客户端。应用的沙盒权限不包含网络客户端。快捷键目录是应用的一部分。KeyTrail 不会把快捷键历史、自定义快捷键、按键事件或你选择的语言发送给开发者或任何其他服务。</p>
+<h2>输入监控</h2>
+<p>监听保持关闭，直到你选择「开始监听」。</p>
+<p>「开始监听」用来在其他应用位于前台时，识别与内置目录相符的快捷键。如果 macOS 尚未允许输入监控，这个按钮会在当次启动中请求一次该权限。如果权限不可用，监听不会开始。你仍可以搜索和阅读目录、编辑自定义快捷键，以及查看或清除已经保存的历史。</p>
+<p>「“输入监控”设置」会打开系统设置中的输入监控面板。你可以在那里允许或移除 KeyTrail。如果你更改这项权限，请退出 KeyTrail 再重新打开。重新打开后，监听保持关闭，直到你再次选择「开始监听」。</p>
+<p>监听开启时，KeyTrail 会安装一个只听不改的事件监听，用于按键按下。该监听原样返回每个事件，不会拦截或改写按键。</p>
+<p>对于不是按键重复的按下，KeyTrail 会在内存中读取键码和修饰键，并与内置目录比较。</p>
+<ul><li>如果目录中没有相符项，KeyTrail 不会保存这次按键。</li><li>如果有相符项，KeyTrail 会保存目录快捷键标识、时间，以及前台应用的名称和套装标识。保存的历史记录不包含键码。</li></ul>
+<p>「暂停记录」会停止写入新的历史。如果监听仍开启，事件监听仍可能收到按键按下。「停止监听」会移除该监听。</p>
+<p>本页不声称密码栏中的按键会被忽略。监听没有单独检查安全输入。监听开启时，按键按下会被接收，以便与目录比较。只有与目录相符的结果会被保存。</p>
+<h2>快捷键历史</h2>
+<p>历史保存在应用沙盒的 Application Support 文件夹中，文件名为 history.json。每条记录包含标识、时间、相符的目录快捷键标识、前台应用的名称和套装标识，以及一条表示该记录来自已识别快捷键的标记。该文件最多保留 200 条。</p>
+<p>「清除历史记录」会把该文件换成空列表，并把清除前的列表写入 history-recovery.json。该恢复文件只保留最近一次清除的内容。只有当前历史为空时，「恢复已清除的历史记录」才能把它放回。再次清除会替换恢复文件。应用没有删除单条历史记录的操作。</p>
+<h2>自定义快捷键</h2>
+<p>自定义快捷键是你保存的记录，不会注册为系统热键。</p>
+<p>录制不使用输入监控。「录制快捷键」开启时，KeyTrail 只在自己的窗口内观察按键按下。如果你保存，应用会把步骤（包括键码和修饰键）、类别名称、你填写的说明、版本范围，以及创建和修改时间，写入同一文件夹中的 custom-shortcuts.json。该文件还会保留编辑器中上次使用的类别名称和版本范围。</p>
+<p>你可以在应用中删除一条自定义快捷键。如果该文件无法读取，应用会在同一文件夹中把它改名移开，以免之后的保存覆盖它。被移开的文件会留在这台 Mac 上，直到你删除它。</p>
+<h2>语言</h2>
+<p>在你选择语言之前，KeyTrail 使用英语。你的选择保存在这台 Mac 上的应用偏好设置中。KeyTrail 不会上传它。</p>
+<h2>共享</h2>
+<p>KeyTrail 不出售、不分享这些信息，也不使用第三方分析、广告或崩溃报告服务。应用会打开的系统位置只有系统设置中的输入监控面板。</p>
+<h2>信息保留多久</h2>
+<p>KeyTrail 不会在固定天数后删除历史。它会保留最多 200 条历史，直到你清除。恢复文件会保留最近一次清除的列表，直到你恢复或再次清除。自定义快捷键记录，以及因无法读取而被移开的文件，会一直保留，直到你删除它们或移除应用的数据。移除应用会删除 macOS 为该应用保留的沙盒容器，其中包括这些文件和已保存的语言偏好。</p>
+<h2>联系</h2>
+<p>如有关于 KeyTrail 或本政策的问题，请写信到下面的地址。这是本应用的公开联系地址，不承诺在固定时间内回复。</p>
+<p><a href="mailto:konglingzhao989@gmail.com">konglingzhao989@gmail.com</a></p>
+<p><a href="../support/">支持</a></p>
+<h2>变更</h2>
+<p>页首日期即这段文字的日期。如果应用处理信息的方式发生变化，本页应同步更新。</p>
+</main>
+<footer>
+<p>© 2026 KeyTrail</p>
+</footer>
+</div>
+</body>
+</html>

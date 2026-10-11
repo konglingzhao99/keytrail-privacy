@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Privacy Policy — KeyTrail</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/icon.png">
+<link rel="alternate" hreflang="en" href="en/">
+<link rel="alternate" hreflang="zh-Hans" href="zh-cn/">
+<link rel="alternate" hreflang="ja" href="ja/">
+<link rel="alternate" hreflang="ru" href="ru/">
+<link rel="alternate" hreflang="fr" href="fr/">
+<link rel="alternate" hreflang="ko" href="ko/">
+<link rel="alternate" hreflang="de" href="de/">
+<link rel="alternate" hreflang="hi" href="hi/">
+<link rel="alternate" hreflang="th" href="th/">
+<link rel="alternate" hreflang="mn" href="mn/">
+<link rel="alternate" hreflang="x-default" href="en/">
+</head>
+<body id="top">
+<a class="skip" href="#content">Skip to content</a>
+<div class="shell">
+<header class="mast">
+<a class="brand" href="#top">
+<img src="assets/icon.png" width="28" height="28" alt="">
+<span>KeyTrail</span>
+</a>
+</header>
+<nav class="languages" aria-label="Language">
+<a href="en/" hreflang="en" lang="en" aria-current="page">English</a>
+<a href="zh-cn/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="fr/" hreflang="fr" lang="fr">Français</a>
+<a href="ko/" hreflang="ko" lang="ko">한국어</a>
+<a href="de/" hreflang="de" lang="de">Deutsch</a>
+<a href="hi/" hreflang="hi" lang="hi">हिन्दी</a>
+<a href="th/" hreflang="th" lang="th">ไทย</a>
+<a href="mn/" hreflang="mn" lang="mn">Монгол</a>
+</nav>
+<main id="content">
+<p class="updated">Last updated: October 11, 2026</p>
+<h1>Privacy Policy</h1>
+<p>KeyTrail is a native macOS menu bar app. From the menu bar you can look up and search keyboard shortcuts, see recent shortcuts that matched the built-in catalog, and keep your own shortcut records.</p>
+<h2>What this page describes</h2>
+<p>This page describes the KeyTrail app that runs on your Mac. KeyTrail does not have an account.</p>
+<h2>What the app handles</h2>
+<p>KeyTrail does not include advertising, analytics, crash reporting, or a network client. The app’s sandbox entitlement does not include a network client. The shortcut catalog is part of the app. KeyTrail does not send shortcut history, custom shortcuts, key events, or your language choice to the developer or to any other service.</p>
+<h2>Input Monitoring</h2>
+<p>Listening stays off until you choose “Start Listening”.</p>
+<p>“Start Listening” is how KeyTrail notices built-in catalog shortcuts while another app is in front. If macOS has not already allowed Input Monitoring, that button asks for it once during that launch. If the permission is not available, listening does not start. You can still search and read the catalog, edit custom shortcuts, and read or clear history that is already saved.</p>
+<p>“Input Monitoring Settings” opens System Settings to the Input Monitoring pane. You can allow or remove KeyTrail there. If you change this permission, quit KeyTrail and open it again. Listening stays off until you choose “Start Listening” again.</p>
+<p>While listening is on, KeyTrail installs a listen-only event tap for key-down events. The tap returns each event unchanged. It does not block or rewrite the key.</p>
+<p>For a key-down that is not a repeat, KeyTrail reads the key code and modifier keys in memory and compares them with the built-in catalog.</p>
+<ul><li>If nothing in the catalog matches, KeyTrail does not save that key-down.</li><li>If something matches, KeyTrail saves the catalog shortcut identifiers, the time, and the name and bundle identifier of the frontmost app. The saved history record does not include the key code.</li></ul>
+<p>“Pause Recording” stops new history from being written. If listening is still on, the tap can still receive key-down events. “Stop Listening” removes the tap.</p>
+<p>This page does not claim that keys typed in a password field are ignored. The listener does not check secure input separately. While listening is on, key-down events are received so they can be compared with the catalog. Only a catalog match is saved.</p>
+<h2>Shortcut history</h2>
+<p>History is stored in a file named history.json, in the app’s sandbox Application Support folder. Each saved event has an identifier, the time, the matching catalog shortcut identifiers, the frontmost app’s name and bundle identifier, and a marker that the event came from a detected shortcut. The file keeps at most 200 events.</p>
+<p>“Clear History” replaces that file with an empty list and writes the cleared list to history-recovery.json. That recovery file keeps only the most recent clear. “Restore cleared history” can put it back only while the current history is empty. Another clear replaces the recovery file. The app has no control that deletes a single history event.</p>
+<h2>Custom shortcuts</h2>
+<p>A custom shortcut is a record you keep. It does not register a system hotkey.</p>
+<p>Recording does not use Input Monitoring. While “Record Shortcut” is on, KeyTrail watches key-down events inside its own window. If you save, the app stores the steps, including the key code and modifier keys, the category name, any details you entered, a version range, and the created and modified times, in custom-shortcuts.json in the same folder. The file also keeps the last category name and version range used in the editor.</p>
+<p>You can delete a custom shortcut in the app. If that file cannot be read, the app moves it aside in the same folder, under a new name, so a later save does not overwrite it. A moved file stays on this Mac until you remove it.</p>
+<h2>Language</h2>
+<p>Until you choose a language, KeyTrail uses English. Your choice is stored in the app’s preferences on this Mac. KeyTrail does not upload it.</p>
+<h2>Sharing</h2>
+<p>KeyTrail does not sell or share this information. It does not use a third-party analytics, advertising, or crash-reporting service. The only system location the app opens is the Input Monitoring pane in System Settings.</p>
+<h2>How long information stays</h2>
+<p>KeyTrail does not delete history after a set number of days. It keeps up to 200 history events until you clear them. The recovery file keeps the last cleared list until you restore it or clear again. Custom shortcut records, and a file moved aside because it could not be read, remain until you delete them or remove the app’s data. Removing the app removes the sandbox container macOS keeps for it, including these files and the saved language preference.</p>
+<h2>Contact</h2>
+<p>For questions about KeyTrail or this policy, write to the address below. This is the public contact for the app. A reply within a set time is not promised.</p>
+<p><a href="mailto:konglingzhao989@gmail.com">konglingzhao989@gmail.com</a></p>
+<p><a href="support/">Support</a></p>
+<h2>Changes</h2>
+<p>The date at the top is the date of this text. If the way the app handles information changes, this page should be updated to match.</p>
+</main>
+<footer>
+<p>© 2026 KeyTrail</p>
+</footer>
+</div>
+</body>
+</html>
